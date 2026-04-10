@@ -1,0 +1,14 @@
+[[main]]
+  name = "Journal"
+  pageRef = "posts"
+  weight = 10
+
+[[main]]
+  name = "Dev Log"
+  pageRef = "devlog"
+  weight = 20
+
+[[main]]
+  name = "Projects"
+  pageRef = "projects"
+  weight = 30

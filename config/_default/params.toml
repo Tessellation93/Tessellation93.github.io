@@ -1,0 +1,42 @@
+colorScheme = "slate"
+defaultAppearance = "light"
+autoSwitchAppearance = false
+enableA11y = false
+enableSearch = true
+enableCodeCopy = true
+enableStructuredBreadcrumbs = false
+replyByEmail = false
+disableImageOptimization = false
+disableImageOptimizationMD = false
+disableTextInHeader = false
+hotlinkFeatureImage = false
+fingerprintAlgorithm = "sha512"
+
+[header]
+  layout = "fixed"
+
+[footer]
+  showMenu = false
+  showCopyright = true
+  showThemeAttribution = false
+  showAppearanceSwitcher = false
+  showScrollToTop = true
+
+[homepage]
+  layout = "profile"
+  showRecent = true
+  showRecentItems = 8
+  showMoreLink = false
+  showMoreLinkDest = "/posts/"
+  cardView = true
+  cardViewScreenWidth = false
+  layoutBackgroundBlur = false
+  disableHeroImageFilter = false
+
+[article]
+  showDate = true
+  showViews = false
+  showLikes = false
+  showDateOnlyInArticle = false
+  showDateUpdated = false
+  showAuthor = false

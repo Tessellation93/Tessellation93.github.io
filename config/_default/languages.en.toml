@@ -1,0 +1,17 @@
+disabled = false
+languageCode = "en"
+languageName = "English"
+weight = 1
+title = "Stephanie Tess van Slyck"
+
+[params]
+  displayName = "EN"
+  isoCode = "en"
+  rtl = false
+  dateFormat = "2 January 2006"
+
+[params.author]
+  name = "Stephanie Tess van Slyck"
+  image = "profile.png"
+  headline = "Datamatiker Student"
+  bio = "Datamatikerstuderende med fokus på Java og systemudvikling."

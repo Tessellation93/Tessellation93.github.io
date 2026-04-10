@@ -1,0 +1,34 @@
+[[main]]
+name = "Home"
+pageRef = "/"
+weight = 1
+
+[[main]]
+name = "Java"
+pageRef = "/java"
+weight = 2
+
+[[main]]
+name = "Databases"
+pageRef = "/databases"
+weight = 3
+
+[[main]]
+name = "Testing"
+pageRef = "/testing"
+weight = 4
+
+[[main]]
+name = "REST APIs"
+pageRef = "/rest"
+weight = 5
+
+[[main]]
+name = "Projects"
+pageRef = "/projects"
+weight = 6
+
+[[main]]
+name = "All Posts"
+pageRef = "/posts"
+weight = 7

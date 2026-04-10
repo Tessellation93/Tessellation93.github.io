@@ -1,0 +1,19 @@
+baseURL = "http://localhost:1313/portfolio/"
+languageCode = "en-us"
+title = "Stephanie Tess Van Slyck"
+theme = "blowfish"
+
+[params]
+
+[params.author]
+name = "Stephanie Tess Van Slyck"
+image = "images/profile.png"
+headline = "Software Development Student"
+bio = "Exploring Java, REST APIs, testing and software design."
+
+[params.homepage]
+layout = "profile"
+showRecent = true
+
+[params.search]
+enable = true

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Dev Log on Stephanie Tess van Slyck</title>
+    <link>http://localhost:1313/portfolio/devlog/</link>
+    <description>Recent content in Dev Log on Stephanie Tess van Slyck</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>© 2026 Stephanie Tess van Slyck</copyright>
+    <lastBuildDate>Sun, 22 Mar 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/portfolio/devlog/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Week 07 — Rest Assured Integration Tests</title>
+      <link>http://localhost:1313/portfolio/devlog/2026-03-22-week07-integration-tests/</link>
+      <pubDate>Sun, 22 Mar 2026 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/portfolio/devlog/2026-03-22-week07-integration-tests/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Week 06 - JUnit 5 DAO Tests</title>
+      <link>http://localhost:1313/portfolio/devlog/2026-03-13-week06-dao-tests/</link>
+      <pubDate>Fri, 13 Mar 2026 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/portfolio/devlog/2026-03-13-week06-dao-tests/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Week 05 - JWT Authentication &amp; Security Layer</title>
+      <link>http://localhost:1313/portfolio/devlog/2026-03-09-week05-jwt/</link>
+      <pubDate>Mon, 09 Mar 2026 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/portfolio/devlog/2026-03-09-week05-jwt/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Week 03–04 - REST API, Javalin &amp; Route Design</title>
+      <link>http://localhost:1313/portfolio/devlog/2026-03-06-week03-rest-api/</link>
+      <pubDate>Fri, 06 Mar 2026 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/portfolio/devlog/2026-03-06-week03-rest-api/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Week 04 — Replacing Dead Code with a Real External API</title>
+      <link>http://localhost:1313/portfolio/devlog/2026-02-20-week04-stackoverflow/</link>
+      <pubDate>Fri, 20 Feb 2026 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/portfolio/devlog/2026-02-20-week04-stackoverflow/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Week 02–03 — IDAO Interface, BaseDAO &amp; All Entities</title>
+      <link>http://localhost:1313/portfolio/devlog/2026-02-13-week02-dao-pattern/</link>
+      <pubDate>Fri, 13 Feb 2026 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/portfolio/devlog/2026-02-13-week02-dao-pattern/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Week 01–02 — Project Setup, HibernateConfig &amp; First Entity</title>
+      <link>http://localhost:1313/portfolio/devlog/2026-02-06-week01-setup/</link>
+      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/portfolio/devlog/2026-02-06-week01-setup/</guid>
+      <description></description>
+      
+    </item>
+    
+  </channel>
+</rss>

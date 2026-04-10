@@ -12,3 +12,8 @@
   name = "Projects"
   pageRef = "projects"
   weight = 30
+
+[[main]]
+  name = "Exam Portfolio"
+  pageRef = "exam-portfolio"
+  weight = 40

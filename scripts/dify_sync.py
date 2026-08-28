@@ -58,6 +58,8 @@ SKIP_NAMES = {"_index.md", "index.md"}
 
 MAX_RETRIES = 5
 BASE_DELAY = 2.0  # seconds
+MIN_INTERVAL = 6.5  # seconds between calls — stays under Dify Sandbox's 10 req/min cap
+_last_call_at = 0.0
 
 
 def require_config():
@@ -81,17 +83,39 @@ def save_map(mapping: dict) -> None:
     MAP_FILE.write_text(json.dumps(mapping, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
 
 
+def _is_rate_limited(resp: requests.Response) -> bool:
+    if resp.status_code == 429:
+        return True
+    if resp.status_code == 403:
+        # Dify's Sandbox plan returns 403 (not 429) for its knowledge-base
+        # rate limit, with {"code": "forbidden", ...} — detect it by message
+        # so we still back off instead of failing immediately.
+        try:
+            body = resp.json()
+        except ValueError:
+            return False
+        return "rate limit" in str(body.get("message", "")).lower()
+    return False
+
+
 def call_with_backoff(method: str, url: str, **kwargs) -> requests.Response:
-    """Retry + exponential backoff + jitter, with rate-limit (429) awareness."""
+    """Retry + exponential backoff + jitter, with rate-limit (429, and Dify's
+    own 403-flavored rate limit) awareness. Also self-throttles to MIN_INTERVAL
+    between calls so we mostly avoid tripping the limit in the first place."""
+    global _last_call_at
     headers = kwargs.pop("headers", {})
     headers["Authorization"] = f"Bearer {API_KEY}"
     for attempt in range(1, MAX_RETRIES + 1):
+        elapsed = time.monotonic() - _last_call_at
+        if elapsed < MIN_INTERVAL:
+            time.sleep(MIN_INTERVAL - elapsed)
         resp = requests.request(method, url, headers=headers, timeout=30, **kwargs)
+        _last_call_at = time.monotonic()
         if resp.status_code < 400:
             return resp
-        if resp.status_code == 429 or resp.status_code >= 500:
+        if _is_rate_limited(resp) or resp.status_code >= 500:
             retry_after = resp.headers.get("Retry-After")
-            delay = float(retry_after) if retry_after else BASE_DELAY * (2 ** (attempt - 1))
+            delay = float(retry_after) if retry_after else max(BASE_DELAY * (2 ** (attempt - 1)), MIN_INTERVAL)
             delay += random.uniform(0, 1)  # jitter
             log.warning(
                 "%s %s -> %s (attempt %d/%d), backing off %.1fs",
@@ -111,7 +135,7 @@ def create_document(name: str, text: str) -> str:
     payload = {
         "name": name,
         "text": text,
-        "indexing_technique": "high_quality",
+        "indexing_technique": "economy",
         "process_rule": {"mode": "automatic"},
     }
     resp = call_with_backoff("POST", url, json=payload)

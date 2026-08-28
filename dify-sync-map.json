@@ -1,0 +1,114 @@
+{
+  "content/devlog/2026-02-06-week01-setup.md": {
+    "document_id": "449107e3-cf22-435d-81b7-ebbda7b33cd8",
+    "content_hash": "8abd07f83ca85edfe9ea323bdacc99336fadf2b0f3ea398374dd5cd80f79c0b5"
+  },
+  "content/devlog/2026-02-13-week02-dao-pattern.md": {
+    "document_id": "6be4711a-c741-42fe-9366-a2af7df2dfd2",
+    "content_hash": "9cfd7e6f5c48666a10fd12354dcad75019ce6932cde549eacc5d688ae7c7220a"
+  },
+  "content/devlog/2026-02-20-week04-stackoverflow.md": {
+    "document_id": "5952398a-48a4-433a-9e85-ff6542949e72",
+    "content_hash": "5015a7f511d1524908371c6e317df4b2e5dc3fc9b281f2d547a448315aaa1dd4"
+  },
+  "content/devlog/2026-03-06-week03-rest-api.md": {
+    "document_id": "731469d3-44d0-4794-93da-0592a307de8d",
+    "content_hash": "59e3087a11feeab964ffa977e4a1298c64a79b223fce81e0b9a4ddc3812b9669"
+  },
+  "content/devlog/2026-03-09-week05-jwt.md": {
+    "document_id": "4b57d516-7620-4364-8fda-e0ae8e454673",
+    "content_hash": "ce2540b5728664cb75388f18a54f809bd9921509024e080ff3f40ed0c37d4016"
+  },
+  "content/devlog/2026-03-13-week06-dao-tests.md": {
+    "document_id": "5cb74800-2dcc-4fed-9cd9-3b56f51540c3",
+    "content_hash": "8d18e44eaa2874e47014f30be42ddd5ec27a2a9bded7ac092d7bde709516cdd4"
+  },
+  "content/devlog/2026-03-22-week07-integration-tests.md": {
+    "document_id": "1e90f8fa-14e6-4ae1-88ee-6e90b3d39471",
+    "content_hash": "5423457bed24712d401581e2570fa5fcf7ca07d61b125169397f46a640e8ba80"
+  },
+  "content/devlog/2026-03-29-week08-git-and-docs.md": {
+    "document_id": "7c6d3550-3496-4f3b-9f7a-8e818350b39c",
+    "content_hash": "7449aeb1e592e271c5cf939d1b531aa5fdb961e46acbdbce854828a2743dcc53"
+  },
+  "content/devlog/2026-04-02-week09-refactoring.md": {
+    "document_id": "2b07bd88-53f1-4b5a-9e62-92a29e168c32",
+    "content_hash": "52a48afb7a682478a579583c6367de8326605ac027de7ecd0cf116dab7cd38ec"
+  },
+  "content/devlog/2026-04-07-week09-deployment.md": {
+    "document_id": "2848a031-899c-4919-861a-497bbac04cc1",
+    "content_hash": "76e44237d70444f6baefdc17c6fbf615544275a95117b60356f68db4ee3552d1"
+  },
+  "content/devlog/2026-04-10-week10-exam.md": {
+    "document_id": "12bac9c1-1cf1-4b6f-ada0-38f9b9ca8896",
+    "content_hash": "984b335364fb5291292cb0f2cc82e69b7ae4349a87286bbcc731251e94c455ea"
+  },
+  "content/posts/2026-01-30-week01-brainstorming.md": {
+    "document_id": "1c775896-e746-44db-8bf0-efe8471a0476",
+    "content_hash": "f3fc0024b16b7b3f65ede68e82a03f1d8075e9681f92f6a433ea9295942ac576"
+  },
+  "content/posts/2026-02-06-week02-first-entity.md": {
+    "document_id": "fce4af3a-37c3-488f-918c-b2a5b23733f5",
+    "content_hash": "933e462dc9e7924cb85e1d66bc5990404b8509a2fe78b67a966d68585246fec0"
+  },
+  "content/posts/2026-02-11-hugo-setup.md": {
+    "document_id": "34181bb1-acb4-4437-abc9-6de83ae6877a",
+    "content_hash": "73aadc3d33eaf813dd4c42d2a9196b90e05934e2da1f6c274e31257cf94792a4"
+  },
+  "content/posts/2026-02-13-week03-jpa-relations.md": {
+    "document_id": "b0a7435d-b649-46b1-8a16-2a79286c6f91",
+    "content_hash": "6c6f9debea5ce50f0c6060f54fab35c76b0ae5021667747419e31fa9357134c8"
+  },
+  "content/posts/2026-02-20-week04-api-integration.md": {
+    "document_id": "f05b6dc0-afd3-4c82-b3c4-0b75d1aca9a3",
+    "content_hash": "546cc158794aaaf69e08de66b86e0bceb487fe5dcd082f6aca8271190e4c09ff"
+  },
+  "content/posts/2026-02-27-week05-sp1-movie.md": {
+    "document_id": "3cdab52c-961a-458f-85ee-ce0010a7ea46",
+    "content_hash": "af115bacad74147b59c83ae2598d1889e2868407de2ee4506b6899ef0e11b5fa"
+  },
+  "content/posts/2026-03-06-week06-rest-api.md": {
+    "document_id": "dd7f5da3-b27f-48be-8681-35930d069d67",
+    "content_hash": "9383abfda5ef531e32bd170341768070175aad9722d2d94fb88f06910930dccc"
+  },
+  "content/posts/2026-03-09-monday-review.md": {
+    "document_id": "bc40eae1-02be-4176-9b1d-8e82bcf1600a",
+    "content_hash": "cea78725003f957cb4433d37347f5359e5779591a5789032972ea5632f52f30b"
+  },
+  "content/posts/2026-03-10-portfolio-day.md": {
+    "document_id": "1222b5ab-2f37-41b4-8fd9-974de880abc3",
+    "content_hash": "eb1ab8b7f85e8c387a66b087652d2634080d881a98c246a0e5bacee02158da59"
+  },
+  "content/posts/2026-03-13-erd-data-model.md": {
+    "document_id": "6649e66d-b797-4f88-8124-f1295612099d",
+    "content_hash": "b4b9a056f793ae72553368135e02c7001472de9f8104f60c917e7171d7bf77d3"
+  },
+  "content/posts/2026-03-14-portfolio-wrapped.md": {
+    "document_id": "39cb2729-824e-4121-8c9a-8af66c140951",
+    "content_hash": "c0f500c3fc2539d7c875dea716d16cd069008ddfa62800a234df1b6e1ef0b0ed"
+  },
+  "content/posts/2026-03-15-flaky-tests-and-external-apis.md": {
+    "document_id": "b757351b-3021-4476-bc1c-859f164a076b",
+    "content_hash": "ace181471b06713c0521b9ae00a4aa6127f3598ec4abacc34a1a05c29a35f9b7"
+  },
+  "content/posts/2026-03-22-back-in-code.md": {
+    "document_id": "b23c20de-7c78-478b-98c6-f5fcb0baa418",
+    "content_hash": "62471808449b5f2e93a530bfc9abee0f5c4a29ee4ac26600202acd5449d74eeb"
+  },
+  "content/posts/2026-03-29-integration-testing.md": {
+    "document_id": "97784cea-a5d0-4861-905f-c081f1376f5e",
+    "content_hash": "2bef84dc9b6a458ab9f3ab452cf605e7b015b6e5edc6ea55f56fd32938e6b0d7"
+  },
+  "content/posts/2026-08-17-aida-kickoff.md": {
+    "document_id": "b4798b02-5daa-4555-9791-36b9e06982f3",
+    "content_hash": "d6da3ec230c8a77739d06a9932c30d88613de2e1fad808e729a094cc3b095aa2"
+  },
+  "content/posts/2026-08-21-rag-first-attempt.md": {
+    "document_id": "60a78acd-4763-479e-ae54-f2951131fadb",
+    "content_hash": "9fc09668e633157abb471a49ab19ab7f26dda1ef6c69ff689ee4c327689a117e"
+  },
+  "content/posts/2026-08-24-rag-automation.md": {
+    "document_id": "49d64ef0-0fa7-4d67-a34e-0237bf3d99e0",
+    "content_hash": "3aad6c7b56f7f249019940229e6c0b33f363f47b20667a7e9a8e4df57329a8d6"
+  }
+}

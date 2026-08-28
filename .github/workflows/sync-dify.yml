@@ -1,0 +1,46 @@
+# Standalone workflow — save as .github/workflows/sync-dify.yml.
+# Runs whenever content/posts or content/devlog change on main.
+
+name: Sync content to Dify
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "content/posts/**.md"
+      - "content/devlog/**.md"
+
+permissions:
+  contents: write  # needed to commit the updated dify-sync-map.json back
+
+jobs:
+  sync-dify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Sync changed posts to Dify knowledge base
+        env:
+          DIFY_API_KEY: ${{ secrets.DIFY_API_KEY }}
+          DIFY_DATASET_ID: ${{ secrets.DIFY_DATASET_ID }}
+          CONTENT_DIRS: content/posts,content/devlog
+        run: python scripts/dify_sync.py
+
+      - name: Commit updated sync map (if changed)
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add dify-sync-map.json
+          git diff --cached --quiet || {
+            git commit -m "chore: update Dify sync map [skip ci]"
+            git push
+          }

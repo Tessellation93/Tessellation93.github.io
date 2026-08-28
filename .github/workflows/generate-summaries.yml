@@ -1,0 +1,62 @@
+# Standalone workflow — save as .github/workflows/generate-summaries.yml.
+# On push to main touching a post/devlog file, drafts a `summary:` for any entry
+# that doesn't have one yet and opens a PR with the result. Never commits to main.
+
+name: Generate post summaries
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "content/posts/**.md"
+      - "content/devlog/**.md"
+
+permissions:
+  contents: write        # create-pull-request pushes the summaries branch
+  pull-requests: write   # ...and opens the PR
+
+jobs:
+  generate-summaries:
+    # skip automated / no-op commits — same convention as the devlog-draft agent
+    if: >-
+      !contains(github.event.head_commit.message, '[skip ci]') &&
+      !contains(github.event.head_commit.message, '[skip summaries]')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Draft summaries for posts missing one
+        env:
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          CONTENT_DIRS: content/posts,content/devlog
+        run: python scripts/generate_summaries.py
+
+      - name: Open PR if any summaries were added
+        uses: peter-evans/create-pull-request@v6
+        with:
+          branch: auto/post-summaries
+          delete-branch: true
+          commit-message: "content: add auto-generated post summaries [skip ci]"
+          title: "Add auto-generated post summaries"
+          body: >-
+            Auto-generated 1–2 sentence `summary:` fields for published posts that
+            were missing one, via `scripts/generate_summaries.py` (Groq
+            `llama-3.1-8b-instant`).
+
+
+            Review the wording before merging — nothing here is published
+            automatically. `summary-map.json` is included so reruns stay
+            idempotent once this merges.
+          labels: automation
+          add-paths: |
+            content/**
+            summary-map.json

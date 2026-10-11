@@ -1,11 +1,11 @@
 ---
-title: "Kodeagenter: What It Actually Looks Like to Debug With a Code Agent"
+title: "Code Agents: What It Actually Looks Like to Debug With One"
 date: 2026-08-28
 draft: false
-tags: ["AIDA", "kodeagenter", "Dify", "GitHub Actions", "Claude"]
+tags: ["AIDA", "code agents", "Dify", "GitHub Actions", "Claude"]
 ---
 
-Session 4's exercise is simple to state: solve a programming task with a code agent, and document the workflow. I missed presenting this one live in class, but the honest version is that I spent the day actually *doing* the exercise instead, on a real task rather than a toy one: getting the RAG chatbot from session 3 from "architecture decided" to "actually working end to end." Claude was the code agent throughout. This is that log.
+Session 4 (Kodeagenter — code agents) has an exercise that is simple to state: solve a programming task with a code agent, and document the workflow. I missed presenting this one live in class, but the honest version is that I spent the day actually *doing* the exercise instead, on a real task rather than a toy one: getting the RAG chatbot from session 3 from "architecture decided" to "actually working end to end." Claude was the code agent throughout. This is that log.
 
 The point of this exercise isn't "the agent got it right first try." It's the opposite, every one of the friction points below is a place where the agent's first assumption was wrong in a specific, diagnosable way, and fixing it was a real back-and-forth, not a black box. That's a more honest and more useful thing to document than a clean success story would be.
 
@@ -45,7 +45,7 @@ Getting from "it works when I run it manually" to "it runs itself" surfaced two 
 
 By the end of the day the chatbot's knowledge base syncs itself automatically: pushing a content change to `main` triggers a GitHub Actions workflow that diffs what changed, calls Dify's API directly (from GitHub's own runners, which don't have the sandboxing problem from friction 1), and keeps the mapping file that makes reruns idempotent. No manual re-upload, ever again, for as long as that workflow keeps running.
 
-As a small bonus once the core pipeline was solid, we used the same collaborative pattern, agent proposes, human reviews, to build a second, smaller agent: a GitHub Actions step that reads each push's commit messages and diff, asks an LLM to draft a devlog entry about it in my own established style, and opens a pull request with the draft rather than publishing anything automatically. It's a fitting note to end a "kodeagenter" session on: an agent that helps document the work of other agents, with a human still firmly in the loop before anything goes live.
+As a small bonus once the core pipeline was solid, we used the same collaborative pattern, agent proposes, human reviews, to build a second, smaller agent: a GitHub Actions step that reads each push's commit messages and diff, asks an LLM to draft a devlog entry about it in my own established style, and opens a pull request with the draft rather than publishing anything automatically. It's a fitting note to end a session about code agents on: an agent that helps document the work of other agents, with a human still firmly in the loop before anything goes live.
 
 ## The honest takeaway
 

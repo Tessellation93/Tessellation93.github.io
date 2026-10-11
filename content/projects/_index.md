@@ -1,4 +1,4 @@
 ---
 title: "Projects"
-description: "Backend projekter bygget på 3. semester"
+description: "Backend projects built during the 3rd semester"
 ---

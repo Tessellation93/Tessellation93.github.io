@@ -1,7 +1,7 @@
 ---
 title: "The Legal and Ethical Side"
 date: 2026-09-25T10:00:00+02:00
-draft: true
+draft: false
 tags: ["AIDA", "EU AI Act", "ethics", "copyright", "sustainability"]
 categories: ["reflection"]
 summary: "The EU AI Act puts educational assessment in the high-risk category, which lands directly on the rubric assessor I built. Plus copyright in RAG, and the energy cost nobody sees."
@@ -23,4 +23,8 @@ Generative AI has a real energy and water footprint. The lever a developer actua
 
 ## Where I land
 
-*(This section is mine to finish — my own view on the trade-offs, not a summary of the reading.)*
+"High-risk" sounded heavy when I first read it, and then I built the thing and it stopped being an abstract category. A language model assessing an internship report has no access to the internship. It cannot know whether the student actually did what the report claims, only whether the text reads as though they did. Once that is clear, returning advisory feedback and follow-up questions instead of a grade is not a compromise made to satisfy a regulation. It is the only output the tool can honestly produce.
+
+That is the pattern I keep finding in this part of the course: the responsible choice and the good-engineering choice usually turn out to be the same choice, arrived at from different directions. Only index material you have the right to use is also how you avoid a knowledge base full of content you cannot vouch for. Do not re-run unchanged jobs is both a token-cost argument and an energy argument. Do not let the model be the final authority is ethics, and it is also just an accurate description of what the model can do.
+
+Where I am less comfortable is the energy question, because it is the one where my own incentives do not help me. I can justify every individual call I make. "It is only one call" is exactly the reasoning that scales badly, and I do not have a good answer for it yet beyond not being wasteful on purpose.

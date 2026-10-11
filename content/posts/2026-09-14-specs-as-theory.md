@@ -1,7 +1,7 @@
 ---
 title: "Specs as the Theory Behind the Code"
 date: 2026-09-14T14:00:00+02:00
-draft: true
+draft: false
 tags: ["AIDA", "spec-driven development", "Naur", "reflection"]
 categories: ["reflection"]
 summary: "Peter Naur argued the real product of programming is the theory the programmers hold, not the code. Working with a code agent makes that argument louder."
@@ -19,4 +19,6 @@ On Standflow every user story was written as a spec before any code — goal, ac
 
 ## What I will carry forward
 
-The more of the typing an AI does, the more the specification is the part that is actually mine, and the part that still makes sense when I come back a month later.
+Writing the spec is where I find the holes. Half the decisions I assumed were obvious turned out not to be, and I only discovered that because something had to be written down before any code existed. The clearest case was file storage: the ticket said stall-holders upload photos, and it took the work stopping and asking "where do these actually go, database or filesystem?" to show that nobody had decided. A ticket that vague would have been answered by whoever typed first.
+
+So the specification is not paperwork I do before the real work. It is the real work, and it is the part that is actually mine once an agent is doing the typing. It is also the only part that still makes sense when I come back to this project in a month.

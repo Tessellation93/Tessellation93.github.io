@@ -32,7 +32,7 @@ jobs:
         env:
           DIFY_API_KEY: ${{ secrets.DIFY_API_KEY }}
           DIFY_DATASET_ID: ${{ secrets.DIFY_DATASET_ID }}
-          CONTENT_DIRS: content/posts,content/devlog
+          CONTENT_DIRS: content/posts
         run: python scripts/dify_sync.py
 
       - name: Commit updated sync map (if changed)

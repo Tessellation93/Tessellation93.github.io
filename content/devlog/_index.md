@@ -1,6 +1,13 @@
 ---
 title: "Dev Log"
 description: "Technical write-ups from the JavaJolt backend project, 3rd semester"
+cascade:
+  _build:
+    render: never
+    list: never
+_build:
+  render: never
+  list: never
 ---
 
 Short technical entries in a Problem / Fix / Result format, written while building **JavaJolt**, my 3rd-semester backend exam project: a RESTful Java API with Javalin, Hibernate, JWT authentication and a full test suite.

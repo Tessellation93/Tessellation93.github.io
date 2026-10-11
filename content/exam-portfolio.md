@@ -32,8 +32,6 @@ draft: false
 
 ## Previous semester
 
-The 3rd-semester backend exam project, **JavaJolt** — a RESTful Java API with Javalin, Hibernate and JWT auth — and the weekly technical entries written while building it.
+The 3rd-semester backend exam project, **JavaJolt** — a RESTful Java API with Javalin, Hibernate and JWT auth.
 
 - [Code repository](https://github.com/Tessellation93/JavaJolt)
-- [Dev Log entries](/devlog/)
-- [3rd-semester journal archive](/archive/)

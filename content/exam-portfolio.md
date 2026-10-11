@@ -36,3 +36,4 @@ The 3rd-semester backend exam project, **JavaJolt** — a RESTful Java API with 
 
 - [Code repository](https://github.com/Tessellation93/JavaJolt)
 - [Dev Log entries](/devlog/)
+- [3rd-semester journal archive](/archive/)

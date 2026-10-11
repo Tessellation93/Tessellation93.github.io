@@ -1,17 +1,25 @@
 /* ---------------------------------------------------------------
    Custom theme layer on top of Blowfish.
-   Warm dark palette, technical type, left-aligned layout, card grid.
+   Deep navy base, neon purple/blue accents, monospace body,
+   left-aligned hero, card grid. Palette carried over from the
+   original site accents (pink/orange/green/blue/purple).
    --------------------------------------------------------------- */
 
 :root {
-  --tv-bg: #221a17;
-  --tv-surface: #2e221c;
-  --tv-surface-hi: #3a2b23;
-  --tv-text: #f2e4d9;
-  --tv-muted: #c0a08c;
-  --tv-accent: #e7a87b;
-  --tv-accent-dim: #b97e55;
-  --tv-border: rgba(231, 168, 123, 0.18);
+  --tv-bg: #0b0a16;
+  --tv-surface: #141229;
+  --tv-surface-hi: #1b1836;
+  --tv-line: #211d3d;
+  --tv-text: #eceaf6;
+  --tv-muted: #8e87a8;
+  --tv-dim: #6d6689;
+
+  --tv-purple: #9664e6;
+  --tv-blue: #46b4e6;
+  --tv-pink: #ff6b9d;
+  --tv-orange: #ff9f43;
+  --tv-green: #64d278;
+
   --tv-mono: "JetBrains Mono", "IBM Plex Mono", ui-monospace, SFMono-Regular,
     "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
   --tv-display: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
@@ -29,7 +37,6 @@ p,
 li,
 td,
 figcaption,
-blockquote,
 .prose {
   font-family: var(--tv-mono) !important;
   color: var(--tv-text) !important;
@@ -38,22 +45,20 @@ blockquote,
 h1,
 h2,
 h3,
-h4,
-.home-hero__name {
+h4 {
   font-family: var(--tv-display) !important;
   color: var(--tv-text) !important;
-  letter-spacing: -0.02em !important;
+  letter-spacing: -0.025em !important;
 }
 
 a {
-  color: var(--tv-accent) !important;
+  color: var(--tv-blue) !important;
 }
 
 a:hover {
-  color: var(--tv-text) !important;
+  color: var(--tv-purple) !important;
 }
 
-/* dial back Blowfish's generous vertical rhythm */
 main > article,
 main > section {
   padding-top: 0 !important;
@@ -61,18 +66,17 @@ main > section {
 
 /* ---- header / nav -------------------------------------------- */
 
-header .font-semibold,
 header nav a,
-header nav button {
+header .font-semibold {
   font-family: var(--tv-mono) !important;
   font-size: 0.82rem !important;
   text-transform: lowercase !important;
-  letter-spacing: 0.04em !important;
+  letter-spacing: 0.03em !important;
   color: var(--tv-muted) !important;
 }
 
 header nav a:hover {
-  color: var(--tv-accent) !important;
+  color: var(--tv-blue) !important;
 }
 
 /* ---- homepage hero ------------------------------------------- */
@@ -80,149 +84,176 @@ header nav a:hover {
 .home-hero-wrap {
   display: block !important;
   text-align: left !important;
-  max-width: 100% !important;
-  margin-bottom: 2.5rem !important;
+  margin-bottom: 3rem !important;
 }
 
 .home-hero {
-  display: flex !important;
-  flex-direction: row !important;
-  align-items: center !important;
-  gap: 1.75rem !important;
+  display: block !important;
   text-align: left !important;
-  margin-bottom: 1.25rem !important;
   padding: 0 !important;
-}
-
-.home-hero__photo {
-  height: 184px !important;
-  width: auto !important;
-  border-radius: 10px !important;
-  border: 1px solid var(--tv-border) !important;
-  flex: 0 0 auto !important;
   margin: 0 !important;
 }
 
-.home-hero__text {
-  min-width: 0;
-}
-
-.home-hero__name {
-  font-size: clamp(2rem, 5vw, 3.25rem) !important;
-  font-weight: 800 !important;
-  text-transform: uppercase !important;
-  line-height: 0.98 !important;
-  margin: 0 0 0.35rem 0 !important;
-}
-
-.home-hero__headline {
+.home-hero__eyebrow {
   font-family: var(--tv-mono) !important;
-  font-size: 0.9rem !important;
+  font-size: 0.7rem !important;
+  letter-spacing: 0.24em !important;
   text-transform: uppercase !important;
-  letter-spacing: 0.16em !important;
-  color: var(--tv-accent) !important;
-  margin: 0 0 0.6rem 0 !important;
+  color: var(--tv-purple) !important;
+  margin: 0 0 1rem 0 !important;
 }
 
-.home-hero__intro {
+.home-hero__title {
+  font-family: var(--tv-display) !important;
+  font-size: clamp(2.4rem, 6vw, 3.6rem) !important;
+  font-weight: 900 !important;
+  line-height: 1.02 !important;
+  letter-spacing: -0.035em !important;
+  margin: 0 0 1.1rem 0 !important;
+}
+
+.home-hero__title-lead,
+.home-hero__title-accent {
+  display: block;
+}
+
+.home-hero__title-accent {
+  background: linear-gradient(100deg, var(--tv-purple), var(--tv-blue));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent !important;
+}
+
+.home-hero__lead,
+.home-hero__lead p {
+  font-size: 0.92rem !important;
+  line-height: 1.75 !important;
+  color: var(--tv-muted) !important;
   max-width: 62ch !important;
-  color: var(--tv-muted) !important;
-  font-size: 0.95rem !important;
-  line-height: 1.65 !important;
-  margin: 0 !important;
+  margin: 0 0 1.6rem 0 !important;
 }
 
-.home-hero__intro p {
-  color: var(--tv-muted) !important;
+.home-hero__cta {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 0.7rem !important;
+  margin-bottom: 0.5rem !important;
 }
 
-@media (max-width: 640px) {
-  .home-hero {
-    flex-direction: column !important;
-    align-items: flex-start !important;
-    gap: 1rem !important;
-  }
+.home-hero__btn {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 0.5rem !important;
+  font-family: var(--tv-mono) !important;
+  font-size: 0.8rem !important;
+  font-weight: 700 !important;
+  padding: 0.65rem 1.2rem !important;
+  border-radius: 9px !important;
+  text-decoration: none !important;
+}
 
-  .home-hero__photo {
-    height: 140px !important;
-  }
+.home-hero__btn--primary {
+  background: linear-gradient(100deg, var(--tv-purple), var(--tv-blue)) !important;
+  color: #0b0a16 !important;
+}
+
+.home-hero__btn--primary:hover {
+  filter: brightness(1.08);
+  color: #0b0a16 !important;
+}
+
+.home-hero__btn--ghost {
+  border: 1px solid var(--tv-line) !important;
+  background-color: var(--tv-surface) !important;
+  color: var(--tv-text) !important;
+}
+
+.home-hero__btn--ghost:hover {
+  border-color: var(--tv-purple) !important;
+  color: var(--tv-text) !important;
+}
+
+.home-hero__btn svg {
+  width: 1rem;
+  height: 1rem;
 }
 
 /* ---- recent articles: card grid ------------------------------ */
 
 .article-link--card {
   background-color: var(--tv-surface) !important;
-  border: 1px solid var(--tv-border) !important;
-  border-radius: 12px !important;
+  border: 1px solid var(--tv-line) !important;
+  border-radius: 13px !important;
   padding: 1.15rem 1.25rem !important;
-  transition: transform 0.18s ease, background-color 0.18s ease !important;
+  transition: transform 0.18s ease, background-color 0.18s ease,
+    border-color 0.18s ease !important;
 }
 
 .article-link--card:hover {
   transform: translateY(-3px) !important;
   background-color: var(--tv-surface-hi) !important;
-  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.35) !important;
+  border-color: var(--tv-purple) !important;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45) !important;
 }
 
-.article-link--card h3,
-.article-link--card h2 {
-  font-size: 1.12rem !important;
-  font-weight: 700 !important;
-  line-height: 1.25 !important;
+.article-link--card h2,
+.article-link--card h3 {
+  font-size: 1.1rem !important;
+  font-weight: 800 !important;
+  line-height: 1.28 !important;
 }
 
-/* date / meta line reads as a terminal label */
 .article-link--card time,
 .article-link--card .text-sm,
 .article-link--card .text-xs {
   font-family: var(--tv-mono) !important;
-  font-size: 0.72rem !important;
+  font-size: 0.68rem !important;
   text-transform: uppercase !important;
-  letter-spacing: 0.1em !important;
-  color: var(--tv-accent) !important;
+  letter-spacing: 0.11em !important;
+  color: var(--tv-purple) !important;
 }
 
-/* ---- taxonomy / tag pills ------------------------------------ */
+/* ---- tag pills ----------------------------------------------- */
 
 a[href*="/tags/"] {
   font-family: var(--tv-mono) !important;
-  font-size: 0.68rem !important;
+  font-size: 0.66rem !important;
   text-transform: lowercase !important;
-  letter-spacing: 0.05em !important;
-  color: var(--tv-muted) !important;
-  background-color: rgba(231, 168, 123, 0.1) !important;
-  border: 1px solid var(--tv-border) !important;
+  letter-spacing: 0.04em !important;
+  color: var(--tv-pink) !important;
+  background-color: rgba(255, 107, 157, 0.09) !important;
+  border: 1px solid rgba(255, 107, 157, 0.4) !important;
   border-radius: 999px !important;
-  padding: 0.12rem 0.55rem !important;
+  padding: 0.12rem 0.6rem !important;
 }
 
 a[href*="/tags/"]:hover {
-  color: var(--tv-accent) !important;
-  background-color: rgba(231, 168, 123, 0.18) !important;
+  background-color: rgba(255, 107, 157, 0.18) !important;
+  color: var(--tv-pink) !important;
 }
 
 /* ---- article body -------------------------------------------- */
 
 .prose code {
   font-family: var(--tv-mono) !important;
-  background-color: rgba(231, 168, 123, 0.12) !important;
-  color: var(--tv-accent) !important;
+  background-color: rgba(150, 100, 230, 0.14) !important;
+  color: var(--tv-blue) !important;
   border-radius: 4px !important;
 }
 
 .prose pre {
-  background-color: #1a1310 !important;
-  border: 1px solid var(--tv-border) !important;
+  background-color: #070610 !important;
+  border: 1px solid var(--tv-line) !important;
   border-radius: 10px !important;
 }
 
 .prose blockquote {
-  border-left: 3px solid var(--tv-accent-dim) !important;
+  border-left: 3px solid var(--tv-purple) !important;
   color: var(--tv-muted) !important;
 }
 
 footer {
   font-family: var(--tv-mono) !important;
-  font-size: 0.75rem !important;
+  font-size: 0.73rem !important;
   color: var(--tv-muted) !important;
 }

@@ -1,46 +1,48 @@
 {{/*
   Site override of Blowfish's home/profile.html.
-  Differences from the theme default:
-    - author image scaled with .Fit (whole photo, not cropped to a square)
-    - left-aligned hero row (photo beside name) instead of a centred column
-    - stable custom class names so assets/css/custom.css can style it reliably
+
+  Replaces the theme's centred avatar + name column with a left-aligned hero:
+  eyebrow label, two-tone headline, lead paragraph, and call-to-action buttons.
+  Text comes from content/_index.md front matter so it can be edited without
+  touching this template. Styling lives in assets/css/custom.css under .home-*.
 */}}
-{{ $disableImageOptimization := .Site.Params.disableImageOptimization | default false }}
 <article class="home-hero-wrap">
   <header class="home-hero">
-    {{ with .Site.Params.Author.image }}
-      {{ $authorImage := "" }}
-      {{ if or (strings.HasPrefix . "http:") (strings.HasPrefix . "https:") }}
-        {{ $authorImage = resources.GetRemote . }}
-      {{ else }}
-        {{ $authorImage = resources.Get . }}
-      {{ end }}
-      {{ if $authorImage }}
-        {{ $final := $authorImage }}
-        {{ if not (or $disableImageOptimization (eq $authorImage.MediaType.SubType "svg")) }}
-          {{ $final = $authorImage.Fit (print "640x640 q" ( $.Site.Params.Author.imagequality | default "92" )) }}
-        {{ end }}
-        <img
-          class="home-hero__photo"
-          alt="{{ $.Site.Params.Author.name | default `Author` }}"
-          src="{{ $final.RelPermalink }}"
-          data-zoom-src="{{ $authorImage.RelPermalink }}">
-      {{ end }}
+
+    {{ with .Params.eyebrow }}
+      <p class="home-hero__eyebrow">{{ . }}</p>
     {{ end }}
-    <div class="home-hero__text">
-      <h1 class="home-hero__name">
+
+    <h1 class="home-hero__title">
+      {{ with .Params.headlineLead }}<span class="home-hero__title-lead">{{ . }}</span>{{ end }}
+      {{ with .Params.headlineAccent }}<span class="home-hero__title-accent">{{ . }}</span>{{ end }}
+      {{ if not (or .Params.headlineLead .Params.headlineAccent) }}
         {{ .Site.Params.Author.name | default .Site.Title }}
-      </h1>
-      {{ with .Site.Params.Author.headline }}
-        <h2 class="home-hero__headline">{{ . | markdownify }}</h2>
       {{ end }}
-      <div class="home-hero__links">
-        {{ partialCached "author-links.html" . }}
-      </div>
+    </h1>
+
+    <div class="home-hero__lead">{{ .Content }}</div>
+
+    <div class="home-hero__cta">
+      {{ with .Params.ctaPrimary }}
+        <a class="home-hero__btn home-hero__btn--primary"
+           href="{{ $.Params.ctaPrimaryURL | default "/posts/" | relURL }}">{{ . }} &rarr;</a>
+      {{ end }}
+      {{ range .Site.Params.Author.links }}
+        {{ range $key, $url := . }}
+          {{ if eq $key "github" }}
+            <a class="home-hero__btn home-hero__btn--ghost" href="{{ $url }}"
+               target="_blank" rel="noopener noreferrer">
+              {{ partial "icon.html" "github" }}<span>GitHub</span>
+            </a>
+          {{ end }}
+        {{ end }}
+      {{ end }}
     </div>
+
   </header>
-  <section class="home-hero__intro prose dark:prose-invert">{{ .Content }}</section>
 </article>
+
 <section>
   {{ partial "recent-articles/main.html" . }}
 </section>

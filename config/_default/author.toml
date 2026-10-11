@@ -1,6 +1,6 @@
 name = "Stephanie Tess van Slyck"
-image = "profile.png"
-headline = "Datamatiker · 4. semester"
+image = "logo.svg"
+headline = "Datamatiker student · 4th semester"
 bio = "4th semester datamatiker at Cphbusiness. Building AI-driven applications, and documenting how and why here."
 links = [
   { github = "https://github.com/Tessellation93" },

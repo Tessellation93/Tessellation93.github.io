@@ -1,8 +1,12 @@
 ---
-title: "Stephanie Tess Van Slyck"
+title: "Stephanie Tess van Slyck"
+eyebrow: "AIDA · Autumn 2026 · Cphbusiness"
+headlineLead: "Building"
+headlineAccent: "AI-Driven Applications"
+ctaPrimary: "Read the AIDA case"
+ctaPrimaryURL: "/posts/"
 ---
 
-Welcome to my software development portfolio.
-
-This site documents my learning journey while studying computer science.  
-Each section represents a course where I explore concepts, build projects and reflect on what I learn.
+Datamatiker student, 4th semester. This portfolio documents how I build with AI as a
+component in real systems — RAG pipelines, code agents, LLM APIs — including the parts
+that broke and what the error messages actually said.

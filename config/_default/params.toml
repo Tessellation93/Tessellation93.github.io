@@ -1,3 +1,4 @@
+logo = "logo.svg"
 colorScheme = "slate"
 defaultAppearance = "dark"
 autoSwitchAppearance = false

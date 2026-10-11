@@ -1,8 +1,8 @@
 ---
 title: "Stephanie Tess van Slyck"
 eyebrow: "AIDA · Autumn 2026 · Cphbusiness"
-headlineLead: "Building"
-headlineAccent: "AI-Driven Applications"
+headlineLead: "Building:"
+headlineAccent: "AI Driven Applications"
 ctaPrimary: "Read the AIDA case"
 ctaPrimaryURL: "/posts/"
 ---

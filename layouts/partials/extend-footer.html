@@ -1,0 +1,45 @@
+{{/*
+  Dify chat widget.
+
+  Renders only when params.dify.token is set in config, so the site builds
+  fine without it. Configure in config/_default/params.toml:
+
+    [dify]
+      token   = "<embed token from Dify: Publish > Embed Into Site>"
+      baseUrl = "https://udify.app"   # optional, this is the default
+
+  The widget is a floating bubble on every page. Styling of the bubble is
+  overridden in assets/css/custom.css so it matches the site palette.
+*/}}
+{{ with .Site.Params.dify }}
+  {{ if .token }}
+    {{ $base := .baseUrl | default "https://udify.app" }}
+    <script>
+      window.difyChatbotConfig = {
+        token: {{ .token }},
+        baseUrl: {{ $base }},
+        containerProps: {
+          style: {
+            bottom: '1.25rem',
+            right: '1.25rem',
+          },
+        },
+      };
+    </script>
+    <script
+      src="{{ $base }}/embed.min.js"
+      id="{{ .token }}"
+      defer></script>
+    <style>
+      #dify-chatbot-bubble-button {
+        background: linear-gradient(100deg, #9664e6, #46b4e6) !important;
+      }
+      #dify-chatbot-bubble-window {
+        width: 22rem !important;
+        height: 34rem !important;
+        border: 1px solid #211d3d !important;
+        border-radius: 14px !important;
+      }
+    </style>
+  {{ end }}
+{{ end }}

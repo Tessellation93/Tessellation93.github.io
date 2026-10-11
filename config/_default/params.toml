@@ -41,3 +41,9 @@ fingerprintAlgorithm = "sha512"
   showDateOnlyInArticle = false
   showDateUpdated = false
   showAuthor = false
+
+[dify]
+  # Embed token from Dify: your chat app > Publish > Embed Into Site.
+  # Leave empty to hide the chat widget.
+  token = ""
+  baseUrl = "https://udify.app"

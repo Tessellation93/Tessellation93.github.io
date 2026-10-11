@@ -1,5 +1,5 @@
 colorScheme = "slate"
-defaultAppearance = "light"
+defaultAppearance = "dark"
 autoSwitchAppearance = false
 enableA11y = false
 enableSearch = true

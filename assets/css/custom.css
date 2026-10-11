@@ -1,27 +1,228 @@
-* {
-  font-family: "Baskerville Old Face", "Baskerville", Georgia, serif !important;
-  color: #2d2d2d !important;
+/* ---------------------------------------------------------------
+   Custom theme layer on top of Blowfish.
+   Warm dark palette, technical type, left-aligned layout, card grid.
+   --------------------------------------------------------------- */
+
+:root {
+  --tv-bg: #221a17;
+  --tv-surface: #2e221c;
+  --tv-surface-hi: #3a2b23;
+  --tv-text: #f2e4d9;
+  --tv-muted: #c0a08c;
+  --tv-accent: #e7a87b;
+  --tv-accent-dim: #b97e55;
+  --tv-border: rgba(231, 168, 123, 0.18);
+  --tv-mono: "JetBrains Mono", "IBM Plex Mono", ui-monospace, SFMono-Regular,
+    "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+  --tv-display: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
 }
 
+/* ---- base ---------------------------------------------------- */
+
+html,
 body {
-  background-color: #f9f7f4 !important;
+  background-color: var(--tv-bg) !important;
 }
 
-.article-link--card:nth-child(1) { background-color: rgba(255, 107, 157, 0.12) !important; }
-.article-link--card:nth-child(2) { background-color: rgba(255, 159, 67, 0.12) !important; }
-.article-link--card:nth-child(3) { background-color: rgba(100, 210, 120, 0.12) !important; }
-.article-link--card:nth-child(4) { background-color: rgba(70, 180, 230, 0.12) !important; }
-.article-link--card:nth-child(5) { background-color: rgba(150, 100, 230, 0.12) !important; }
-.article-link--card:nth-child(6) { background-color: rgba(255, 107, 157, 0.12) !important; }
-.article-link--card:nth-child(7) { background-color: rgba(255, 159, 67, 0.12) !important; }
-.article-link--card:nth-child(8) { background-color: rgba(100, 210, 120, 0.12) !important; }
+body,
+p,
+li,
+td,
+figcaption,
+blockquote,
+.prose {
+  font-family: var(--tv-mono) !important;
+  color: var(--tv-text) !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+.home-hero__name {
+  font-family: var(--tv-display) !important;
+  color: var(--tv-text) !important;
+  letter-spacing: -0.02em !important;
+}
+
+a {
+  color: var(--tv-accent) !important;
+}
+
+a:hover {
+  color: var(--tv-text) !important;
+}
+
+/* dial back Blowfish's generous vertical rhythm */
+main > article,
+main > section {
+  padding-top: 0 !important;
+}
+
+/* ---- header / nav -------------------------------------------- */
+
+header .font-semibold,
+header nav a,
+header nav button {
+  font-family: var(--tv-mono) !important;
+  font-size: 0.82rem !important;
+  text-transform: lowercase !important;
+  letter-spacing: 0.04em !important;
+  color: var(--tv-muted) !important;
+}
+
+header nav a:hover {
+  color: var(--tv-accent) !important;
+}
+
+/* ---- homepage hero ------------------------------------------- */
+
+.home-hero-wrap {
+  display: block !important;
+  text-align: left !important;
+  max-width: 100% !important;
+  margin-bottom: 2.5rem !important;
+}
+
+.home-hero {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  gap: 1.75rem !important;
+  text-align: left !important;
+  margin-bottom: 1.25rem !important;
+  padding: 0 !important;
+}
+
+.home-hero__photo {
+  height: 184px !important;
+  width: auto !important;
+  border-radius: 10px !important;
+  border: 1px solid var(--tv-border) !important;
+  flex: 0 0 auto !important;
+  margin: 0 !important;
+}
+
+.home-hero__text {
+  min-width: 0;
+}
+
+.home-hero__name {
+  font-size: clamp(2rem, 5vw, 3.25rem) !important;
+  font-weight: 800 !important;
+  text-transform: uppercase !important;
+  line-height: 0.98 !important;
+  margin: 0 0 0.35rem 0 !important;
+}
+
+.home-hero__headline {
+  font-family: var(--tv-mono) !important;
+  font-size: 0.9rem !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.16em !important;
+  color: var(--tv-accent) !important;
+  margin: 0 0 0.6rem 0 !important;
+}
+
+.home-hero__intro {
+  max-width: 62ch !important;
+  color: var(--tv-muted) !important;
+  font-size: 0.95rem !important;
+  line-height: 1.65 !important;
+  margin: 0 !important;
+}
+
+.home-hero__intro p {
+  color: var(--tv-muted) !important;
+}
+
+@media (max-width: 640px) {
+  .home-hero {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 1rem !important;
+  }
+
+  .home-hero__photo {
+    height: 140px !important;
+  }
+}
+
+/* ---- recent articles: card grid ------------------------------ */
 
 .article-link--card {
-  border: none !important;
-  transition: transform 0.2s ease, box-shadow 0.2s ease !important;
+  background-color: var(--tv-surface) !important;
+  border: 1px solid var(--tv-border) !important;
+  border-radius: 12px !important;
+  padding: 1.15rem 1.25rem !important;
+  transition: transform 0.18s ease, background-color 0.18s ease !important;
 }
 
 .article-link--card:hover {
   transform: translateY(-3px) !important;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.08) !important;
+  background-color: var(--tv-surface-hi) !important;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.35) !important;
+}
+
+.article-link--card h3,
+.article-link--card h2 {
+  font-size: 1.12rem !important;
+  font-weight: 700 !important;
+  line-height: 1.25 !important;
+}
+
+/* date / meta line reads as a terminal label */
+.article-link--card time,
+.article-link--card .text-sm,
+.article-link--card .text-xs {
+  font-family: var(--tv-mono) !important;
+  font-size: 0.72rem !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.1em !important;
+  color: var(--tv-accent) !important;
+}
+
+/* ---- taxonomy / tag pills ------------------------------------ */
+
+a[href*="/tags/"] {
+  font-family: var(--tv-mono) !important;
+  font-size: 0.68rem !important;
+  text-transform: lowercase !important;
+  letter-spacing: 0.05em !important;
+  color: var(--tv-muted) !important;
+  background-color: rgba(231, 168, 123, 0.1) !important;
+  border: 1px solid var(--tv-border) !important;
+  border-radius: 999px !important;
+  padding: 0.12rem 0.55rem !important;
+}
+
+a[href*="/tags/"]:hover {
+  color: var(--tv-accent) !important;
+  background-color: rgba(231, 168, 123, 0.18) !important;
+}
+
+/* ---- article body -------------------------------------------- */
+
+.prose code {
+  font-family: var(--tv-mono) !important;
+  background-color: rgba(231, 168, 123, 0.12) !important;
+  color: var(--tv-accent) !important;
+  border-radius: 4px !important;
+}
+
+.prose pre {
+  background-color: #1a1310 !important;
+  border: 1px solid var(--tv-border) !important;
+  border-radius: 10px !important;
+}
+
+.prose blockquote {
+  border-left: 3px solid var(--tv-accent-dim) !important;
+  color: var(--tv-muted) !important;
+}
+
+footer {
+  font-family: var(--tv-mono) !important;
+  font-size: 0.75rem !important;
+  color: var(--tv-muted) !important;
 }

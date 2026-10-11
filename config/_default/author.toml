@@ -2,4 +2,7 @@ name = "Stephanie Tess van Slyck"
 image = "profile.png"
 headline = "Datamatiker · 4. semester"
 bio = "4th semester datamatiker at Cphbusiness. Building AI-driven applications, and documenting how and why here."
-links = []
+links = [
+  { github = "https://github.com/Tessellation93" },
+  { linkedin = "https://www.linkedin.com/in/stephanie-tess-van-slyck-75716a229" },
+]

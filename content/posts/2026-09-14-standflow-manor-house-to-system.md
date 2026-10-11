@@ -1,13 +1,15 @@
 ---
-title: "Standflow: From a Manor-House Visit to a Working System"
+title: "Standflow: From an Overflowing Inbox to a Working System"
 date: 2026-09-14T10:00:00+02:00
 draft: false
 tags: ["AIDA", "Standflow", "software architecture", "project", "requirements"]
 categories: ["technical", "project"]
-summary: "The project case: a real customer with a real problem, the idea we proposed, and the system we sketched and then built to solve it."
+summary: "The project case: a real customer with a real problem, the idea we proposed, and the system we sketched and then built to solve it. I was not on the company visit, so my part started from what the team brought back."
 ---
 
-This post covers two lessons at once: the idea proposal that came out of visiting a company, and the project description and system sketch that followed. The company was Engestofte Gods, a manor running a Christmas market, and the project became [Standflow](https://standflow.roneu.dk/).
+This post covers two lessons at once: the idea proposal that came out of a company visit, and the project description and system sketch that followed. The company was Engestofte Gods, a manor running a Christmas market, and the project became [Standflow](https://standflow.roneu.dk/).
+
+I should say up front that I was not on that visit. The rest of the team went and came back with the brief, so everything below starts from their account and from the written material rather than from anything I saw myself.
 
 ## The problem, in the customer's own terms
 

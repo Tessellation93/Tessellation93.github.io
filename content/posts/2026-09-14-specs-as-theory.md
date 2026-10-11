@@ -15,7 +15,7 @@ Naur argued the real product of programming is not the code but the *theory* the
 
 ## In practice
 
-On Standflow every user story was written as a spec before any code — goal, acceptance criteria, boundaries — and `AGENTS.md` encoded the architectural theory. When a feature needed a decision the spec did not cover, such as how to store uploaded files, the work stopped and asked instead of inventing an architecture nobody had agreed to.
+On Standflow every user story was written as a spec before any code, with a goal, acceptance criteria and boundaries, and `AGENTS.md` encoded the architectural theory. When a feature needed a decision the spec did not cover, such as how to store uploaded files, the work stopped and asked instead of inventing an architecture nobody had agreed to.
 
 ## What I will carry forward
 

@@ -5,7 +5,7 @@ draft: false
 tags: ["AIDA", "code agents", "Dify", "GitHub Actions"]
 ---
 
-Session 4 (Kodeagenter — code agents) has an exercise that is simple to state: solve a programming task with a code agent, and document the workflow. I missed presenting this one live in class, but the honest version is that I spent the day actually *doing* the exercise instead, on a real task rather than a toy one: getting the RAG chatbot from session 3 from "architecture decided" to "actually working end to end." An AI code agent did the hands-on work throughout. This is that log.
+Session 4 (Kodeagenter, meaning code agents) has an exercise that is simple to state: solve a programming task with a code agent, and document the workflow. I missed presenting this one live in class, but the honest version is that I spent the day actually *doing* the exercise instead, on a real task rather than a toy one: getting the RAG chatbot from session 3 from "architecture decided" to "actually working end to end." An AI code agent did the hands-on work throughout. This is that log.
 
 The point of this exercise isn't "the agent got it right first try." It's the opposite, every one of the friction points below is a place where the agent's first assumption was wrong in a specific, diagnosable way, and fixing it was a real back-and-forth, not a black box. That's a more honest and more useful thing to document than a clean success story would be.
 

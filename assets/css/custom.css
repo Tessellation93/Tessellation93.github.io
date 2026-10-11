@@ -270,3 +270,21 @@ footer {
   padding-top: 1.1rem;
   border-top: 1px solid var(--tv-line);
 }
+
+/* ---- chat widget: keep it pinned while scrolling --------------- */
+
+#dify-chatbot-bubble-button,
+#dify-chatbot-bubble-window {
+  position: fixed !important;
+  z-index: 2147483000 !important;
+}
+
+#dify-chatbot-bubble-button {
+  bottom: 1.25rem !important;
+  right: 1.25rem !important;
+}
+
+/* the theme's scroll-to-top button sits in the same corner */
+#scroll-to-top {
+  inset-inline-end: 5.5rem !important;
+}

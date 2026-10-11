@@ -31,6 +31,6 @@ The data flows one way and is easy to narrate, which matters for an oral exam: a
 
 ## What it turned into
 
-The sketch became seven user stories, each written as a ticket with acceptance criteria: login and consent, application handling, customer–admin chat, templates and variables, newsletters with recipient segmentation, GDPR (consent, secure-token unsubscribe, account deletion), and the paginated public vendor page. All seven are built, the backend test suite passes, and the app is deployed.
+The sketch became seven user stories, each written as a ticket with acceptance criteria: login and consent, application handling, customer and admin chat, templates and variables, newsletters with recipient segmentation, GDPR (consent, secure-token unsubscribe, account deletion), and the paginated public vendor page. All seven are built, the backend test suite passes, and the app is deployed.
 
 The lesson I took from the idea-to-system step is that the hardest part was not the architecture, it was being honest about what the customer's problem actually was. "Too many emails" is not a feature request. Turning it into "a register with status, notes, segmented messaging and a public view" was the real design work; everything after that was execution.

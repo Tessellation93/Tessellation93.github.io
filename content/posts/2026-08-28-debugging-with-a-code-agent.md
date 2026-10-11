@@ -2,16 +2,16 @@
 title: "Code Agents: What It Actually Looks Like to Debug With One"
 date: 2026-08-28
 draft: false
-tags: ["AIDA", "code agents", "Dify", "GitHub Actions", "Claude"]
+tags: ["AIDA", "code agents", "Dify", "GitHub Actions"]
 ---
 
-Session 4 (Kodeagenter — code agents) has an exercise that is simple to state: solve a programming task with a code agent, and document the workflow. I missed presenting this one live in class, but the honest version is that I spent the day actually *doing* the exercise instead, on a real task rather than a toy one: getting the RAG chatbot from session 3 from "architecture decided" to "actually working end to end." Claude was the code agent throughout. This is that log.
+Session 4 (Kodeagenter — code agents) has an exercise that is simple to state: solve a programming task with a code agent, and document the workflow. I missed presenting this one live in class, but the honest version is that I spent the day actually *doing* the exercise instead, on a real task rather than a toy one: getting the RAG chatbot from session 3 from "architecture decided" to "actually working end to end." An AI code agent did the hands-on work throughout. This is that log.
 
 The point of this exercise isn't "the agent got it right first try." It's the opposite, every one of the friction points below is a place where the agent's first assumption was wrong in a specific, diagnosable way, and fixing it was a real back-and-forth, not a black box. That's a more honest and more useful thing to document than a clean success story would be.
 
 ## Friction 1: the agent can't reach the internet the way you'd assume
 
-First surprise: Claude's own execution environment, and its bridge to my laptop, turned out to be sandboxed behind a network allowlist. Calls to Dify's API came back `403 Forbidden` from an internal proxy, not from Dify itself. The same restriction had already quietly affected an earlier `git push`.
+First surprise: the code agent's own execution environment, and its bridge to my laptop, turned out to be sandboxed behind a network allowlist. Calls to Dify's API came back `403 Forbidden` from an internal proxy, not from Dify itself. The same restriction had already quietly affected an earlier `git push`.
 
 The fix wasn't clever, it was just correct: run the actual API-calling script from my own real Terminal, where the network access is normal, and have the agent write and hand me the code rather than trying to execute it live. Worth naming as a real lesson, a code agent's own sandbox is part of the system you're debugging, not a neutral wrapper around your machine.
 

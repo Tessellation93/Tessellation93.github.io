@@ -22,9 +22,11 @@ draft: false
 - [04 — Code Agents: What It Actually Looks Like to Debug With One](/posts/2026-08-28-debugging-with-a-code-agent/)
 - [05 — Building an AI Rubric Assessor](/posts/2026-08-31-rubric-assessor-reflection/)
 - [06 — Architecture of an LLM-Backed Rubric Assessor](/posts/2026-09-04-rubric-assessor-architecture/)
-- [08/09 — Standflow: From a Manor-House Visit to a Working System](/posts/2026-09-14-standflow-manor-house-to-system/)
+- [07 — Specs as the Theory Behind the Code](/posts/2026-09-14-specs-as-theory/)
+- [08/09 — Standflow: From an Overflowing Inbox to a Working System](/posts/2026-09-14-standflow-manor-house-to-system/)
 - [10 — Building a Whole Project with a Code Agent](/posts/2026-09-18-building-a-whole-project-with-a-code-agent/)
 - [11 — Secrets, Escaping and Safe Choices](/posts/2026-09-21-secrets-escaping-and-safe-choices/)
+- [12 — The Legal and Ethical Side](/posts/2026-09-25-legal-and-ethical/)
 - [13 — The Excursion I Missed](/posts/2026-09-29-excursion-i-missed/)
 - [14 — Where MCP Would Fit in a Project Like Standflow](/posts/2026-10-02-where-mcp-would-fit/)
 

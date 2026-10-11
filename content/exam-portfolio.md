@@ -1,27 +1,38 @@
 ---
 title: "Exam Portfolio"
-date: 2026-04-10
+date: 2026-10-11
 draft: false
 ---
 
-## JavaJolt — 3rd Semester Backend Exam
+## AIDA — AI-Driven Applications, 4th Semester
 
-- [Code Repository](https://github.com/Tessellation93/JavaJolt)
-- [Live API](http://209.38.230.212:7070)
-- [Video](#) *(add link after recording)*
+- [Portfolio repository](https://github.com/Tessellation93/Tessellation93.github.io)
+- [This site, live](https://tessellation93.github.io/)
 
-## Dev Log
+**Group project — Standflow**, a stall-holder application system for the Christmas market at Engestofte Gods.
 
-The following entries document the development of JavaJolt from project setup to deployment:
+- [Live application](https://standflow.roneu.dk/)
+- [Code repository](https://github.com/Rovelt123/standflow)
 
-- [Week 01 - Project Setup](/devlog/2026-02-06-week01-setup/)
-- [Week 02 - DAO Pattern](/devlog/2026-02-13-week02-dao-pattern/)
-- [Week 03 - REST API](/devlog/2026-03-06-week03-rest-api/)
-- [Week 04 - Stack Overflow Integration](/devlog/2026-02-20-week04-stackoverflow/)
-- [Week 05 - JWT Security](/devlog/2026-03-09-week05-jwt/)
-- [Week 06 - DAO Tests](/devlog/2026-03-13-week06-dao-tests/)
-- [Week 07 - Integration Tests](/devlog/2026-03-22-week07-integration-tests/)
-- [Week 08 - Git Strategy & Docs](/devlog/2026-03-29-week08-git-and-docs/)
-- [Week 09 - Refactoring](/devlog/2026-04-02-week09-refactoring/)
-- [Week 09 - Deployment](/devlog/2026-04-07-week09-deployment/)
-- [Week 10 - Exam Submission](/devlog/2026-04-10-week10-exam/)
+### Session coverage
+
+- [01 — AIDA Kickoff: Bringing AI Into the Portfolio](/posts/2026-08-17-aida-kickoff/)
+- [02 — RAG I: Three Ways to Build a Chatbot](/posts/2026-08-21-rag-first-attempt/)
+- [03 — RAG II: Making the Chatbot Keep Up With Itself](/posts/2026-08-24-rag-automation/)
+- [04 — Code Agents: What It Actually Looks Like to Debug With One](/posts/2026-08-28-debugging-with-a-code-agent/)
+- [05 — Building an AI Rubric Assessor](/posts/2026-08-31-rubric-assessor-reflection/)
+- [06 — Architecture of an LLM-Backed Rubric Assessor](/posts/2026-09-04-rubric-assessor-architecture/)
+- [08/09 — Standflow: From a Manor-House Visit to a Working System](/posts/2026-09-14-standflow-manor-house-to-system/)
+- [10 — Building a Whole Project with a Code Agent](/posts/2026-09-18-building-a-whole-project-with-a-code-agent/)
+- [11 — Secrets, Escaping and Safe Choices](/posts/2026-09-21-secrets-escaping-and-safe-choices/)
+- [13 — The Excursion I Missed](/posts/2026-09-29-excursion-i-missed/)
+- [14 — Where MCP Would Fit in a Project Like Standflow](/posts/2026-10-02-where-mcp-would-fit/)
+
+---
+
+## Previous semester
+
+The 3rd-semester backend exam project, **JavaJolt** — a RESTful Java API with Javalin, Hibernate and JWT auth — and the weekly technical entries written while building it.
+
+- [Code repository](https://github.com/Tessellation93/JavaJolt)
+- [Dev Log entries](/devlog/)

@@ -262,10 +262,11 @@ footer {
 
 .site-disclaimer {
   font-family: var(--tv-mono) !important;
-  font-size: 0.72rem !important;
-  line-height: 1.6 !important;
+  font-size: 0.7rem !important;
+  line-height: 1.75 !important;
   color: var(--tv-dim) !important;
-  max-width: 62ch;
+  max-width: none !important;
+  width: 100%;
   margin: 2.5rem 0 0 0 !important;
   padding-top: 1.1rem;
   border-top: 1px solid var(--tv-line);

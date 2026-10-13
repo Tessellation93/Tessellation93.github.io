@@ -1,6 +1,6 @@
 ---
 title: "Dev Log"
-description: "Technical write-ups from the JavaJolt backend project, 3rd semester"
+description: "Archived technical write-ups"
 cascade:
   _build:
     render: never
